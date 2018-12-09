@@ -120,6 +120,37 @@
             <v-card flat>
               <v-card-text>
 
+
+                 <slot name="eventDetailsDescription" v-bind="slotData">
+                  <v-textarea v-if="$dayspan.supports.description"
+                    hide-details single-line solo flat
+                    prepend-icon="subject"
+                    :label="labels.description"
+                    :readonly="isReadOnly"
+                    v-model="details.description"
+                  ></v-textarea>
+                </slot>
+
+                <slot name="eventDetailsDistance" v-bind="slotData">
+                  <v-text-field
+                    single-line hide-details solo flat
+                    prepend-icon="directions_run"
+                    placeholder="Add distance"
+                    :readonly="isReadOnly"
+                    v-model="details.distance"
+                  ></v-text-field>
+                </slot>
+
+                <slot name="eventDetailsTime" v-bind="slotData">
+                  <v-text-field
+                    single-line hide-details solo flat
+                    prepend-icon="access_time"
+                    placeholder="Add time"
+                    :readonly="isReadOnly"
+                    v-model="details.time"
+                  ></v-text-field>
+                </slot>
+
                 <!-- Location -->
                 <slot name="eventDetailsLocation" v-bind="slotData">
                   <v-text-field v-if="$dayspan.supports.location"
@@ -132,26 +163,6 @@
                 </slot>
 
                 <!-- Description -->
-                <slot name="eventDetailsDescription" v-bind="slotData">
-                  <v-textarea v-if="$dayspan.supports.description"
-                    hide-details single-line solo flat
-                    prepend-icon="subject"
-                    :label="labels.description"
-                    :readonly="isReadOnly"
-                    v-model="details.description"
-                  ></v-textarea>
-                </slot>
-
-                <!-- Calendar -->
-                <slot name="eventDetailsCalendar" v-bind="slotData">
-                  <v-text-field v-if="$dayspan.supports.calendar"
-                    single-line hide-details solo flat readonly
-                    prepend-icon="event"
-                    :label="labels.calendar"
-                    :readonly="isReadOnly"
-                    v-model="details.calendar"
-                  ></v-text-field>
-                </slot>
 
                 <!-- Color -->
                 <slot name="eventDetailsColor" v-bind="slotData">
@@ -171,45 +182,7 @@
                 </slot>
 
                 <!-- Icon -->
-                <slot name="eventDetailsIcon" v-bind="slotData">
-                  <v-select v-if="$dayspan.supports.icon"
-                    single-line hide-details solo flat
-                    :prepend-icon="details.icon || 'help'"
-                    :items="$dayspan.icons"
-                    :disabled="isReadOnly"
-                    v-model="details.icon">
-                    <template slot="item" slot-scope="{ item }">
-                      <v-list-tile-avatar>
-                        <v-icon>{{ item.value }}</v-icon>
-                      </v-list-tile-avatar>
-                      <v-list-tile-content>
-                        {{ item.text }}
-                      </v-list-tile-content>
-                    </template>
-                  </v-select>
-                </slot>
-
-                <!-- Busy -->
-                <slot name="eventDetailsBusy" v-bind="slotData">
-                  <v-select v-if="$dayspan.supports.busy"
-                    single-line hide-details solo flat
-                    prepend-icon="work"
-                    :items="busyOptions"
-                    :disabled="isReadOnly"
-                    v-model="details.busy"
-                  ></v-select>
-                </slot>
-
-                <!-- new options --> 
-                <slot name="eventDetailsBusy" v-bind="slotData">
-                  <v-select v-if="$dayspan.supports.busy"
-                    single-line hide-details solo flat
-                    prepend-icon="work"
-                    :items="newOptions"
-                    :disabled="isReadOnly"
-                    v-model="details.busy"
-                  ></v-select>
-                </slot>
+            
 
                 <slot name="eventDetailsExtra" v-bind="slotData"></slot>
 

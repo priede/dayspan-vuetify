@@ -9,6 +9,7 @@
     v-model="type"
     item-text="label"
     item-value="value"
+    :selected="2"
     @click:append-outer="custom"
   ></v-select>
 
