@@ -95,7 +95,9 @@ export default {
       second:   [LOCALE_ENTRY, LOCALE_ENTRY],
       seconds:  [LOCALE_ENTRY, LOCALE_ENTRY],
       busy:     LOCALE_ENTRY,
-      free:     LOCALE_ENTRY
+      free:     LOCALE_ENTRY,
+      new:     LOCALE_ENTRY,
+      old:     LOCALE_ENTRY
     }
   },
 
@@ -143,6 +145,8 @@ export default {
       second:   [LOCALE_ENTRY, LOCALE_ENTRY],
       seconds:  [LOCALE_ENTRY, LOCALE_ENTRY],
       busy:     LOCALE_ENTRY,
+      free:     LOCALE_ENTRY,
+      new:      LOCALE_ENTRY,
       free:     LOCALE_ENTRY
     }
   },
@@ -183,6 +187,8 @@ export default {
       seconds:  [LOCALE_ENTRY, LOCALE_ENTRY],
       busy:     LOCALE_ENTRY,
       free:     LOCALE_ENTRY,
+      new:      LOCALE_ENTRY,
+      old:     LOCALE_ENTRY,
       location: LOCALE_ENTRY,
       description: LOCALE_ENTRY,
       calendar: LOCALE_ENTRY,

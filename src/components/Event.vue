@@ -200,6 +200,17 @@
                   ></v-select>
                 </slot>
 
+                <!-- new options --> 
+                <slot name="eventDetailsBusy" v-bind="slotData">
+                  <v-select v-if="$dayspan.supports.busy"
+                    single-line hide-details solo flat
+                    prepend-icon="work"
+                    :items="newOptions"
+                    :disabled="isReadOnly"
+                    v-model="details.busy"
+                  ></v-select>
+                </slot>
+
                 <slot name="eventDetailsExtra" v-bind="slotData"></slot>
 
               </v-card-text>
@@ -414,6 +425,14 @@ export default {
       default() {
         return this.$dsDefaults().busyOptions;
       }
+    },
+
+    newOptions:
+    {
+      type: Array,
+      default() {
+        return this.$dsDefaults().newOptions;
+      }
     }
   },
 
@@ -448,6 +467,7 @@ export default {
         schedule: this.schedule,
         details: this.details,
         busyOptions: this.busyOptions,
+        newOptions: this.newOptions,
         day: this.day,
         calendar: this.calendar,
         calendarEvent: this.calendarEvent,

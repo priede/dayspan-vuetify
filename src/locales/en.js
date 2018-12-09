@@ -115,7 +115,9 @@ export default {
         second:   ['second', 'seconds'],
         seconds:  ['second', 'seconds'],
         busy:     'Busy',
-        free:     'Free'
+        free:     'Free',
+        new:      'new',
+        old:      'old'
       }
     },
     dsCalendarEventChip: {
@@ -144,7 +146,9 @@ export default {
         second:   ['second', 'seconds'],
         seconds:  ['second', 'seconds'],
         busy:     'Busy',
-        free:     'Free'
+        free:     'Free',
+        new:      'new',
+        old:      'old'
       }
     },
     dsCalendarEventCreatePopover: {
@@ -169,6 +173,8 @@ export default {
         seconds:  ['second', 'seconds'],
         busy:     'Busy',
         free:     'Free',
+        new:      'new',
+        old:      'old',
         location: 'Add location',
         description: 'Add description',
         calendar: 'Calendar',
@@ -212,6 +218,10 @@ export default {
       busyOptions: [
         {text: 'Busy'},
         {text: 'Free'}
+      ],
+      newOptions: [
+        {text: 'new'},
+        {text: 'old'}
       ]
     },
     dsScheduleActions: {
