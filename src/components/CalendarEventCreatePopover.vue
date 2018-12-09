@@ -277,6 +277,13 @@ export default {
       default() {
         return this.$dsDefaults().busyOptions;
       }
+    },
+    newOptions:
+    {
+      type: Array,
+      default() {
+        return this.$dsDefaults().busyOptions;
+      }
     }
   },
 
