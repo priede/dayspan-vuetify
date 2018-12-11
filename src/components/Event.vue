@@ -137,6 +137,9 @@
                     prepend-icon="directions_run"
                     placeholder="Add distance"
                     :readonly="isReadOnly"
+                    return-masked-value
+                    mask="##.##"
+                    suffix="miles"
                     v-model="details.distance"
                   ></v-text-field>
                 </slot>
@@ -145,9 +148,11 @@
                   <v-text-field
                     single-line hide-details solo flat
                     prepend-icon="access_time"
-                    placeholder="Add time"
                     :readonly="isReadOnly"
                     v-model="details.time"
+                    return-masked-value
+                    mask="##:##:##"
+                    suffix="HH:MM:SS"
                   ></v-text-field>
                 </slot>
 
