@@ -125,6 +125,7 @@
                   <v-textarea v-if="$dayspan.supports.description"
                     hide-details single-line solo flat
                     prepend-icon="subject"
+                    placeholder="Describe the training"
                     :label="labels.description"
                     :readonly="isReadOnly"
                     v-model="details.description"
@@ -135,7 +136,7 @@
                   <v-text-field
                     single-line hide-details solo flat
                     prepend-icon="directions_run"
-                    placeholder="Add distance"
+                    placeholder="08.25 mi"
                     :readonly="isReadOnly"
                     return-masked-value
                     mask="##.##"
@@ -149,6 +150,7 @@
                     single-line hide-details solo flat
                     prepend-icon="access_time"
                     :readonly="isReadOnly"
+                    placeholder="00:00:00"
                     v-model="details.time"
                     return-masked-value
                     mask="##:##:##"
@@ -161,6 +163,7 @@
                   <v-text-field v-if="$dayspan.supports.location"
                     single-line hide-details solo flat
                     prepend-icon="location_on"
+                    placeholder="Hinsdale, IL"
                     :label="labels.location"
                     :readonly="isReadOnly"
                     v-model="details.location"
