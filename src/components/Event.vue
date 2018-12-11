@@ -63,8 +63,7 @@
       <slot name="scheduleTitle" v-bind="{schedule, schedule, calendarEvent, details}">
 
         <!-- class="ds-textfield ds-calendar-event-title" -->
-        <v-text-field single-line hide-details solo flat
-          class="ds-event-title"
+        <v-text-field style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
           :label="labels.title"
           :readonly="isReadOnly"
           v-model="details.title"
@@ -123,7 +122,7 @@
 
                  <slot name="eventDetailsDescription" v-bind="slotData">
                   <v-textarea v-if="$dayspan.supports.description"
-                    hide-details single-line solo flat
+                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
                     prepend-icon="subject"
                     placeholder="Describe the training"
                     :label="labels.description"
@@ -134,11 +133,12 @@
 
                 <slot name="eventDetailsDistance" v-bind="slotData">
                   <v-text-field
-                    single-line hide-details solo flat
+                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
                     prepend-icon="directions_run"
                     placeholder="08.25 mi"
                     :readonly="isReadOnly"
                     return-masked-value
+                    label="Add distance"
                     mask="##.##"
                     suffix="miles"
                     v-model="details.distance"
@@ -147,10 +147,11 @@
 
                 <slot name="eventDetailsTime" v-bind="slotData">
                   <v-text-field
-                    single-line hide-details solo flat
+                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
                     prepend-icon="access_time"
                     :readonly="isReadOnly"
-                    placeholder="00:00:00"
+                    placeholder="00:56:30"
+                    label="Add time"
                     v-model="details.time"
                     return-masked-value
                     mask="##:##:##"
@@ -160,29 +161,30 @@
 
                 <!-- Location -->
                 <slot name="eventDetailsLocation" v-bind="slotData">
-                  <v-text-field v-if="$dayspan.supports.location"
-                    single-line hide-details solo flat
+                  <v-text-field  v-if="$dayspan.supports.location"
                     prepend-icon="location_on"
                     placeholder="Hinsdale, IL"
                     :label="labels.location"
                     :readonly="isReadOnly"
+                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
                     v-model="details.location"
                   ></v-text-field>
                 </slot>
 
                 <!-- Description -->
-
                 <!-- Color -->
                 <slot name="eventDetailsColor" v-bind="slotData">
                   <v-select v-if="$dayspan.supports.color"
-                    single-line hide-details solo flat
                     prepend-icon="invert_colors"
                     :items="$dayspan.colors"
                     :color="details.color"
+                    placeholder="Select"
+                    label="Select color"
                     :disabled="isReadOnly"
+                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
                     v-model="details.color">
-                    <template slot="item" slot-scope="{ item }">
-                      <v-list-tile-content>
+                    <template slot="item" slot-scope="{ item }" >
+                      <v-list-tile-content style="background-color: #12a3ad">
                         <div class="ds-color-option" :style="{backgroundColor: item.value}" v-text="item.text"></div>
                       </v-list-tile-content>
                     </template>
