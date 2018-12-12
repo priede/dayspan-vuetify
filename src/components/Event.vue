@@ -42,7 +42,7 @@
         <!-- More Actions -->
         <slot name="scheduleActions" v-bind="{calendarEvent, schedule, calendar, actioned, readOnly}">
 
-          <ds-schedule-actions
+<!--           <ds-schedule-actions
             v-if="calendarEvent && !isReadOnly"
             v-bind="{$scopedSlots}"
             v-on="$listeners"
@@ -54,7 +54,7 @@
                {{ labels.moreActions }}
             </v-btn>
           </ds-schedule-actions>
-
+ -->
         </slot>
 
       </div>

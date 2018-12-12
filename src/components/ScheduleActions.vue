@@ -7,7 +7,7 @@
     </template>
 
     <v-list>
-
+<!-- 
       <v-list-tile @click="remove" v-if="canRemove">
         <v-list-tile-title v-html="labels.remove"></v-list-tile-title>
       </v-list-tile>
@@ -30,7 +30,7 @@
 
       <v-list-tile @click="setEnd" v-if="canSetEnd">
         <v-list-tile-title v-html="labels.setEnd"></v-list-tile-title>
-      </v-list-tile>
+      </v-list-tile> -->
 
       <v-list-tile @click="moveStart" v-if="canMove">
         <v-menu
