@@ -374,41 +374,41 @@ export default {
     ]
   },
 
-  dsScheduleFrequencyWeek: {
-    labels: {
-      type: LOCALE_ENTRY
-    },
-    options: [
-      { text: LOCALE_ENTRY, value: 'any'},
-      { text: LOCALE_ENTRY, value: 'oneof'},
-      { text: LOCALE_ENTRY, value: 'every'}
-    ],
-    types: [
-      { text: LOCALE_ENTRY, property: 'weekOfMonth', max: 6 },
-      { text: LOCALE_ENTRY, property: 'weekspanOfMonth', max: 7, min: 1, offset: -1 },
-      { text: LOCALE_ENTRY, property: 'fullWeekOfMonth', max: 6 },
-      { text: LOCALE_ENTRY, property: 'lastWeekspanOfMonth', max: 7, min: 1, offset: -1 },
-      { text: LOCALE_ENTRY, property: 'lastFullWeekOfMonth', max: 6 },
-      { text: LOCALE_ENTRY, property: 'weekOfYear', max: 54 },
-      { text: LOCALE_ENTRY, property: 'weekspanOfYear', max: 53, min: 1, offset: -1 },
-      { text: LOCALE_ENTRY, property: 'fullWeekOfYear', max: 54 },
-      { text: LOCALE_ENTRY, property: 'lastWeekspanOfYear', max: 53, min: 1, offset: -1 },
-      { text: LOCALE_ENTRY, property: 'lastFullWeekOfYear', max: 54 }
-    ]
-  },
+  // dsScheduleFrequencyWeek: {
+  //   labels: {
+  //     type: LOCALE_ENTRY
+  //   },
+  //   options: [
+  //     { text: LOCALE_ENTRY, value: 'any'},
+  //     { text: LOCALE_ENTRY, value: 'oneof'},
+  //     { text: LOCALE_ENTRY, value: 'every'}
+  //   ],
+  //   types: [
+  //     { text: LOCALE_ENTRY, property: 'weekOfMonth', max: 6 },
+  //     { text: LOCALE_ENTRY, property: 'weekspanOfMonth', max: 7, min: 1, offset: -1 },
+  //     { text: LOCALE_ENTRY, property: 'fullWeekOfMonth', max: 6 },
+  //     { text: LOCALE_ENTRY, property: 'lastWeekspanOfMonth', max: 7, min: 1, offset: -1 },
+  //     { text: LOCALE_ENTRY, property: 'lastFullWeekOfMonth', max: 6 },
+  //     { text: LOCALE_ENTRY, property: 'weekOfYear', max: 54 },
+  //     { text: LOCALE_ENTRY, property: 'weekspanOfYear', max: 53, min: 1, offset: -1 },
+  //     { text: LOCALE_ENTRY, property: 'fullWeekOfYear', max: 54 },
+  //     { text: LOCALE_ENTRY, property: 'lastWeekspanOfYear', max: 53, min: 1, offset: -1 },
+  //     { text: LOCALE_ENTRY, property: 'lastFullWeekOfYear', max: 54 }
+  //   ]
+  // },
 
-  dsScheduleFrequencyYear: {
-    lookback: 5,
-    lookahead: 20,
-    labels: {
-      type: LOCALE_ENTRY
-    },
-    options: [
-      { text: LOCALE_ENTRY, value: 'any'},
-      { text: LOCALE_ENTRY, value: 'oneof'},
-      { text: LOCALE_ENTRY, value: 'every'}
-    ]
-  },
+  // dsScheduleFrequencyYear: {
+  //   lookback: 5,
+  //   lookahead: 20,
+  //   labels: {
+  //     type: LOCALE_ENTRY
+  //   },
+  //   options: [
+  //     { text: LOCALE_ENTRY, value: 'any'},
+  //     { text: LOCALE_ENTRY, value: 'oneof'},
+  //     { text: LOCALE_ENTRY, value: 'every'}
+  //   ]
+  // },
 
   dsScheduleModifier: {
     canRemove: true,
