@@ -23,14 +23,6 @@ export default {
     lastDayOfMonth: (day) => 'Laaste dag van ' + day.toMoment().locale('nl').format('MMMM'),
     lastWeekday:    (day) => 'Laatste ' + day.toMoment().locale('nl').format('dddd') + ' in ' + day.toMoment().locale('nl').format('MMMM'),
     none: () => 'Geen herhaling',
-    daily: () => 'Dagelijks',
-    weekly: (day) => 'Wekelijks op ' + day.toMoment().locale('nl').format('dddd'),
-    monthlyWeek: (day) => 'Maandelijks op de ' + suffix(day.weekspanOfMonth + 1, true) + ' ' + day.toMoment().locale('nl').format('dddd'),
-    annually: (day) => 'Jaalijks op ' + day.format('D MMMM'),
-    annuallyMonthWeek: (day) => 'Jaarlijks op de ' + suffix(day.weekspanOfMonth + 1, true) + ' ' + day.toMoment().locale('nl').format('dddd') + ' van ' + day.toMoment().locale('nl').format('MMMM'),
-    weekday: (day) => 'Iedere werkdag (maandag tot vrijdag)',
-    monthly: (day) => 'Maandelijks op de ' + day.toMoment().locale('nl').format('Do') + ' dag',
-    custom: () => 'Aangepast..'
   },
   schedule: {
     cancels: 'met annulering op',
