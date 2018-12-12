@@ -96,14 +96,14 @@ export default {
       {
         return [];
       }
-
+      const selector = ['none', 'daily', 'weekly'];
+      
       return Patterns
-        .filter((pattern) => pattern.listed)
+        .filter((pattern) => selector.includes(pattern.name))
         .map((pattern) => ({
           label: pattern.describe( this.day ),
           value: pattern.name
-        }))
-      ;
+        }));
     },
 
     customIcon()
