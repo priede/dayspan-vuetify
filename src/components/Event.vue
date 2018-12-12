@@ -32,7 +32,6 @@
             color="primary"
             :disabled="!canSave"
             @click.stop="save">
-
             <span v-html="labels.save"></span>
 
           </v-btn>
@@ -64,6 +63,7 @@
 
         <!-- class="ds-textfield ds-calendar-event-title" -->
         <v-text-field style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
+          required
           :label="labels.title"
           :readonly="isReadOnly"
           v-model="details.title"
@@ -122,18 +122,19 @@
 
                  <slot name="eventDetailsDescription" v-bind="slotData">
                   <v-textarea v-if="$dayspan.supports.description"
-                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
+                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 15px; padding-right: 30px"
                     prepend-icon="subject"
                     placeholder="Describe the training"
                     :label="labels.description"
                     :readonly="isReadOnly"
                     v-model="details.description"
+                    required
                   ></v-textarea>
                 </slot>
 
                 <slot name="eventDetailsDistance" v-bind="slotData">
                   <v-text-field
-                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
+                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 15px; padding-right: 30px"
                     prepend-icon="directions_run"
                     placeholder="08.25 mi"
                     :readonly="isReadOnly"
@@ -147,7 +148,7 @@
 
                 <slot name="eventDetailsTime" v-bind="slotData">
                   <v-text-field
-                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
+                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 15px; padding-right: 30px"
                     prepend-icon="access_time"
                     :readonly="isReadOnly"
                     placeholder="00:56:30"
@@ -166,7 +167,7 @@
                     placeholder="Hinsdale, IL"
                     :label="labels.location"
                     :readonly="isReadOnly"
-                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
+                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 15px; padding-right: 30px"
                     v-model="details.location"
                   ></v-text-field>
                 </slot>
@@ -181,10 +182,10 @@
                     placeholder="Select"
                     label="Select color"
                     :disabled="isReadOnly"
-                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 25px; padding-right: 30px"
+                    style="background-color: rgba(0, 0, 0, 0.04); padding-top: 25px; padding-left: 15px; padding-right: 30px"
                     v-model="details.color">
                     <template slot="item" slot-scope="{ item }" >
-                      <v-list-tile-content style="background-color: #12a3ad">
+                      <v-list-tile-content >
                         <div class="ds-color-option" :style="{backgroundColor: item.value}" v-text="item.text"></div>
                       </v-list-tile-content>
                     </template>
