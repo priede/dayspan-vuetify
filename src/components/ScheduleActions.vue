@@ -7,11 +7,12 @@
     </template>
 
     <v-list>
-<!-- 
+      
       <v-list-tile @click="remove" v-if="canRemove">
         <v-list-tile-title v-html="labels.remove"></v-list-tile-title>
       </v-list-tile>
 
+<!-- 
       <v-list-tile @click="exclude" v-if="canExclude">
         <v-list-tile-title v-html="labels.exclude"></v-list-tile-title>
       </v-list-tile>

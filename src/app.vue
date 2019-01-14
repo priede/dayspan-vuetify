@@ -6,6 +6,14 @@
       :read-only="readOnly"
       @change="saveState">
 
+      <template slot="eventPopover" slot-scope="slotData">
+         <ds-calendar-event-popover
+          v-bind="slotData"
+          :read-only="readOnly"
+          @finish="saveState"
+        ></ds-calendar-event-popover>
+      </template>
+
     </ds-calendar-app>
 
   </v-app>
